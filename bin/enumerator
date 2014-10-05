@@ -64,7 +64,7 @@ if __name__ == '__main__':
     elif args.single:
         ip_list = [args.single]
 
-    # Set the scan mode config option.
+    # Set config options.
     cnf = config.Config()
 
     print '[+] IP list parsed, sending hosts to nmap...'
