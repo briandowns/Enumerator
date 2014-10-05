@@ -12,8 +12,7 @@ class Config(object):
     def __init__(self):
         try:
             self.config = ConfigObj("../config.ini")
-            self.sections = self.config.keys()
             [setattr(self, section, self.config[section])
-             for section in self.sections]
+             for section in self.config.keys()]
         except (ConfigObjError, IOError), e:
             print e
