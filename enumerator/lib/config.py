@@ -15,4 +15,4 @@ class Config(object):
             [setattr(self, section, self.config[section])
              for section in self.config.keys()]
         except (ConfigObjError, IOError), e:
-            print e
+            print e # This needs to be handled somehow...
