@@ -65,7 +65,7 @@ if __name__ == '__main__':
         ip_list = [args.single]
 
     # Set the scan mode config option.
-    config.mode = args.mode
+    cnf = config.Config()
 
     print '[+] IP list parsed, sending hosts to nmap...'
     pool = multiprocessing.Pool(

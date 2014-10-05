@@ -19,7 +19,6 @@ import glob
 import subprocess
 from blinker import signal
 
-import config
 import delegator
 from .process_manager import ProcessManager
 
@@ -106,7 +105,7 @@ def scan(args):
         pm.start_processes(process.get('command'), params={
             'host': ip,
             'output_dir': output_dir,
-            'scan_mode': process.get(config.mode),
+            'scan_mode': process.get(cnf.scan['mode']),
         })
 
     # nmap scans have completed at this point, send results to delegation
